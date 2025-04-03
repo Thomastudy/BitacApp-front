@@ -25,3 +25,6 @@ dist-ssr
 
 basura_reciclaje/
 src/config/URL.jsx
+
+.env
+.env.dev
