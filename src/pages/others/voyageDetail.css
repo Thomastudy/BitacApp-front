@@ -1,0 +1,205 @@
+.voyage-detail-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.voyage-detail-header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.voyage-detail-header h1 {
+  margin: 0;
+  font-size: 2rem;
+  color: #333;
+}
+
+.back-button {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  padding: 5px;
+}
+
+.back-button:hover {
+  background-color: #f5f5f5;
+  border-color: #ccc;
+}
+
+.voyage-detail-content {
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.voyage-detail-section {
+  padding: 24px;
+  border-bottom: 1px solid #eee;
+}
+
+.voyage-detail-section:last-child {
+  border-bottom: none;
+}
+
+.voyage-detail-section h2 {
+  margin: 0 0 20px 0;
+  font-size: 1.8rem;
+  color: #444;
+}
+
+.detail-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.detail-item {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.detail-label {
+  font-size: 2rem;
+  color: #666;
+  font-weight: 500;
+}
+
+.detail-value {
+  font-size: 2.5rem;
+  color: #333;
+}
+
+.voyage-notes {
+  line-height: 1.6;
+  color: #555;
+  white-space: pre-wrap;
+}
+
+.crew-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.crew-member {
+  background-color: #f5f5f5;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
+.crew-member a {
+  color: #444;
+  text-decoration: none;
+}
+
+.crew-guests {
+  background-color: #f5f5f5;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 1.8rem;
+  border: 2px dashed #ccc;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .voyage-detail-container {
+    padding: 16px;
+    padding-bottom: 15rem;
+  }
+
+  .voyage-detail-header h1 {
+    font-size: 2.6rem;
+  }
+
+  .detail-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .voyage-detail-section {
+    padding: 16px;
+  }
+}
+
+/* pictures */
+.voyage-detail-photo {
+  display: flex;
+  overflow-x: auto;
+  gap: 2rem;
+  padding: 2rem;
+  padding-bottom: 2rem;
+  margin-bottom: 2rem;
+  /* Asegura scroll suave en navegadores compatibles */
+  scroll-behavior: smooth;
+  /* Oculta la barra de scroll en webkit */
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Esconde la barra de scroll pero mantiene la funcionalidad */
+.voyage-detail-photo::-webkit-scrollbar {
+  display: none;
+}
+
+/* Contenedor de cada foto Polaroid */
+.polaroid {
+  background: white;
+  padding: 1rem;
+  padding-bottom: 3rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 2px;
+  /* Previene que la imagen se encoja */
+  flex: 0 0 auto;
+  /* Efecto de rotación aleatoria sutil */
+  transform: rotate(var(--random-rotate));
+  transition: transform 0.3s ease;
+}
+
+.polaroid:hover {
+  transform: rotate(0deg) scale(1.02);
+}
+
+.voyage-detail-photo img {
+  height: 15rem;
+  width: 20rem;
+  object-fit: cover;
+  border-radius: 2px;
+}
+
+/* Opcional: estilo para la descripción debajo de la foto */
+.polaroid p {
+  text-align: center;
+  margin-top: 1rem;
+  font-family: "Permanent Marker", cursive; /* Fuente tipo escritura a mano */
+  color: #333;
+}
+
+/* Botones de edicion o modificacion */
+.handler-voyages {
+  text-align: center;
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: row;
+  gap: 1.5rem;
+}
+.handler-voyages button {
+  height: auto;
+  padding: 1rem 0;
+  width: 90%;
+  margin: 1rem 0;
+  box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.8);
+  border: none;
+}
+.delete {
+  background-color: rgb(240, 34, 34);
+  flex: 50%;
+}
+.update {
+  background-color: rgb(255, 220, 79);
+}

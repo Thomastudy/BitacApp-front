@@ -1,0 +1,6 @@
+.section {
+  height: 8rem;
+  border-bottom: 1px solid var(--negro);
+  padding: 3rem 3rem 0 ;
+  
+}

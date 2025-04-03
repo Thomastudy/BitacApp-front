@@ -1,0 +1,287 @@
+/* sessions.css - Estilos compartidos para autenticación */
+
+html
+
+/* Layout principal para páginas de autenticación */
+.sessions {
+  color: var(--blanco);
+  background: var(--principal-gradient);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5rem 2rem;
+}
+
+/* Contenedor de formularios */
+.auth-form-container {
+  width: 100%;
+  max-width: 40rem;
+  margin: 0 auto;
+}
+
+/* Estilos compartidos para formularios */
+.form--div {
+  position: relative;
+  margin: 5rem 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.form--input {
+  width: 100%;
+  max-width: 50rem;
+  height: 6rem;
+  border-radius: 0.6rem;
+  padding: 2rem 1.5rem;
+  border-top: none;
+  border-right: none;
+  border-left: 0.1rem solid var(--blanco);
+  border-bottom: 0.2rem solid var(--blanco);
+  background-color: transparent;
+  color: var(--blanco);
+  font-size: 2.2rem;
+  font-weight: 600;
+  transition: border-color 0.3s ease;
+}
+
+.form--input:focus {
+  outline: none;
+  border-color: var(--Oranje);
+}
+
+.form--input:-webkit-autofill,
+.form--input:-webkit-autofill:hover,
+.form--input:-webkit-autofill:focus {
+  -webkit-text-fill-color: var(--blanco);
+  -webkit-box-shadow: 0 0 0px 1000px transparent inset;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+.form--label {
+  position: absolute;
+  margin-left: 2rem;
+  transform: translateY(-50%);
+  pointer-events: none;
+  transition: all 0.3s ease;
+  font-family: var(--fuente-principal);
+  font-size: 1.8rem;
+
+  border-radius: 10%;
+  padding: 0 0.5rem;
+  font-weight: 300;
+  border-radius: 0.5rem;
+  color: var(--blanco);
+}
+
+/* Enlaces y navegación */
+.link-sessions {
+  color: var(--blanco);
+  font-size: 2.2rem;
+  margin-top: 2rem;
+  text-decoration: none;
+  transition: opacity 0.3s ease;
+}
+
+.link-sessions:hover {
+  opacity: 0.8;
+}
+
+.sessions--selection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 4rem;
+}
+
+.sessions--selection a {
+  color: var(--blanco);
+  text-decoration: underline;
+  font-size: 2.2rem;
+}
+
+/* Elemento decorativo */
+.line {
+  margin: 2rem auto;
+  height: 0.3rem;
+  width: 25rem;
+  background-color: var(--blanco);
+  border-radius: 2rem;
+  opacity: 0.8;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .sessions {
+    padding: 3rem 1.5rem;
+  }
+
+  .form--input {
+    font-size: var(--fs-normal);
+  }
+
+  .form--label {
+    font-size: var(--fs-small);
+  }
+
+  .line {
+    width: 20rem;
+  }
+}
+
+/*  INICIATE  */
+/* iniciate.css */
+.iniciate-container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  background: var(--principal-gradient);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.iniciate-content {
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.5rem;
+}
+
+.logo-wrapper {
+  padding: 1rem;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  transition: transform 0.3s ease;
+}
+
+.logo-wrapper:hover {
+  transform: scale(1.05);
+}
+
+.main-logo {
+  width: 150px;
+  height: auto;
+}
+
+.loading-logo {
+  width: 150px;
+  height: auto;
+}
+
+.animate-pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.welcome-text {
+  text-align: center;
+  color: white;
+}
+
+.welcome-text h1 {
+  font-size: 2.6rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.welcome-text p {
+  font-size: 1.6rem;
+  opacity: 0.9;
+}
+
+.actions-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.primary-button {
+  width: 100%;
+  padding: 1rem 2rem;
+  font-size: 1.8rem;
+  font-weight: 500;
+  color: white;
+  background: rgba(255, 255, 255, 0.2);
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.primary-button:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: translateY(-2px);
+}
+
+.divider {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin: 0.5rem 0;
+}
+
+.divider-line {
+  flex: 1;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.divider-text {
+  color: white;
+  font-size: 1.4rem;
+  opacity: 0.8;
+}
+
+.register-link {
+  color: white;
+  font-size: 2rem;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.register-link:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.error-message {
+  font-size: 1.6rem;
+}
+
+@media (max-width: 480px) {
+  .iniciate-content {
+    max-width: 320px;
+  }
+
+  .welcome-text h1 {
+    font-size: 3rem;
+  }
+
+  .welcome-text p {
+    font-size: 2.5rem;
+  }
+
+  .primary-button {
+    font-size: 2.5rem;
+  }
+}

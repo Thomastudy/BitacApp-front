@@ -1,0 +1,120 @@
+:root {
+  /* paleta */
+  --principal: rgb(1, 22, 64);
+  --principal-gradient: linear-gradient(
+    0deg,
+    rgba(1, 22, 64, 1) 0%,
+    rgba(1, 35, 64, 1) 100%
+  );
+  --blanco: #fff;
+  --negro: #2a2a2a;
+  /* Colores */
+  --Azul-Claro: #012340;
+  --Azul-Oscuro: #011640;
+  --Creme: #d9d2c5;
+  --Oranje: #f27141;
+  --Reddish: #733939;
+
+  /* Tipografía */
+  --fuente-principal: "Outfit", sans-serif;
+  --fs-small: 1.6rem;
+  --fs-normal: 2.2rem;
+  --fs-medium: 2.6rem;
+  --fs-large: 3rem;
+
+  /* Espaciados */
+  --spacing-small: 1rem;
+  --spacing-medium: 2rem;
+  --spacing-large: 3rem;
+
+  /* Bordes */
+  --border-radius: 2rem;
+}
+
+/* Reset básico */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%; /* Mantiene tu base de 10px */
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: var(--fuente-principal);
+  line-height: 1.5;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: var(--fs-large);
+  margin-bottom: var(--spacing-medium);
+}
+h2 {
+  font-size: var(--fs-medium);
+  margin-bottom: var(--spacing-medium);
+}
+
+h3 {
+  font-size: var(--fs-medium);
+  margin-bottom: var(--spacing-small);
+}
+
+p {
+  font-size: var(--fs-normal);
+  margin-bottom: var(--spacing-medium);
+}
+
+/* Botones */
+button {
+  border: 1px solid var(--blanco);
+  color: var(--blanco);
+  font-size: var(--fs-medium);
+  padding: var(--spacing-medium);
+  border-radius: var(--border-radius);
+  margin: var(--spacing-medium);
+  background-color: var(--principal);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.container {
+  text-align: center;
+  min-height: 51rem;
+  width: 100%;
+  max-width: 120rem;
+  margin: 0 auto;
+  padding: 0 var(--spacing-medium);
+}
+
+.loading--logo {
+  margin: 10rem auto 0;
+  width: 37rem;
+  max-width: 100%;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+/* Media queries para responsividad */
+@media (max-width: 768px) {
+  html {
+    font-size: 56.25%; /* 9px */
+  }
+}
+
+@media (max-width: 480px) {
+  html {
+    font-size: 50%; /* 8px */
+  }
+}
+
+.padding-bottom {
+  padding-bottom: 14rem;
+}
