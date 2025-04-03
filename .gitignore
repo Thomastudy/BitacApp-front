@@ -24,7 +24,6 @@ dist-ssr
 *.sw?
 
 basura_reciclaje/
-src/config/URL.jsx
 
 .env
 .env.dev
