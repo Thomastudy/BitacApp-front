@@ -8,7 +8,6 @@ import { UseUser } from "../../contexts/UserContext";
 import { alertIcon } from "../../utils/alerts";
 import Loading from "../../utils/loader/loading";
 
-
 function LogIn() {
   const { isAuth, login, loading } = UseUser();
   const navigate = useNavigate();
