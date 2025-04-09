@@ -1,0 +1,78 @@
+.loader {
+  position: relative; /* para que el barco se posicione respecto a esto */
+  align-items: center;
+  margin: auto;
+  margin-top: 30rem;
+  height: 30px;
+  aspect-ratio: 10;
+  --c: #0000 64%, #3ad7e2 66% 98%, #ff000000 101%;
+  background: radial-gradient(38% 133% at 50% 159%, var(--c)) 0 0,
+    radial-gradient(38% 133% at 50% -59%, var(--c)) 25% 100%;
+  background-size: calc(100% / 3) 52%;
+  background-repeat: repeat-x;
+  animation: l1 3s infinite linear;
+}
+
+@keyframes l1 {
+  to {
+    background-position: 50% 0, 75% 100%;
+  }
+}
+
+.boat {
+  position: absolute;
+  top: -36px;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: float 3s ease-in-out infinite;
+  width: 40px;
+  height: 40px;
+  z-index: 10;
+}
+
+/* Casco del barco */
+.hull {
+  width: 40px;
+  height: 12px;
+  background: #8b4513;
+  border-radius: 0 0 20px 20px;
+  position: absolute;
+  bottom: 0;
+}
+
+/* Vela principal */
+.main {
+  width: 0;
+  height: 0;
+  border-left: 0px solid transparent;
+  border-right: 20px solid transparent;
+  border-bottom: 30px solid rgb(202, 202, 202);
+  position: absolute;
+  bottom: 14px;
+  left: 12px;
+}
+
+/* Vela de proa (jib) */
+.jib {
+  width: 0;
+  height: 0;
+  border-right: 0px solid transparent;
+  border-left: 10px solid transparent;
+  border-bottom: 30px solid rgb(202, 202, 202);
+  position: absolute;
+  bottom: 13px;
+  left: 0px;
+}
+
+/* Movimiento del barco entero */
+@keyframes float {
+  0% {
+    transform: translateX(-50%) translateY(0) rotate(-1deg);
+  }
+  50% {
+    transform: translateX(-50%) translateY(20px) rotate(1deg);
+  }
+  100% {
+    transform: translateX(-50%) translateY(0) rotate(-1deg);
+  }
+}

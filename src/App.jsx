@@ -22,6 +22,9 @@ import { VoyageProvider } from "./contexts/VoyageContext";
 import { BoatProvider } from "./contexts/BoatContext";
 import AddNewBoat from "./pages/others/AddNewBoat";
 import EditVoyage from "./pages/others/EditVoyage";
+import Loading from "./utils/loader/loading";
+
+
 
 function LayOut() {
   return (
@@ -47,7 +50,7 @@ function App() {
 function PublicRoute({ children }) {
   const { isAuth, loading } = UseUser();
   if (loading) {
-    // return <Loading />;
+    return <Loading />;
   }
   if (isAuth === true) {
     return <Navigate to="/home" />;
@@ -57,7 +60,7 @@ function PublicRoute({ children }) {
 function ProtectedRoute({ children }) {
   const { isAuth, loading } = UseUser();
   if (loading) {
-    // return <Loading />;
+    return <Loading />;
   }
   if (isAuth === false) {
     return <Navigate to="/" />;

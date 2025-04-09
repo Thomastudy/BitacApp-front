@@ -4,8 +4,10 @@ import axios from "../../config/axios";
 import Logo from "../../assets/logo.png";
 import "./session.css";
 import { UseUser } from "../../contexts/UserContext";
-import Loading from "../../utils/Loading";
+
 import { alertIcon } from "../../utils/alerts";
+import Loading from "../../utils/loader/loading";
+
 
 function LogIn() {
   const { isAuth, login, loading } = UseUser();
@@ -35,9 +37,8 @@ function LogIn() {
     }
   };
 
-  const viewPass = false
+  const viewPass = false;
 
-  
   useEffect(() => {
     if (isAuth) {
       return navigate("/home");

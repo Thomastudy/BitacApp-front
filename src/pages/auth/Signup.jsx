@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import axios from "../../config/axios";
 import Logo from "../../assets/logo.png";
 import "./session.css";
 import { UseUser } from "../../contexts/UserContext";

@@ -1,1 +1,1 @@
-export const URL_link = process.env.REACT_APP_BACKEND_URL
+export const URL_link = "http://localhost:8080"
