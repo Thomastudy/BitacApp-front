@@ -1,12 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import axios from "../../config/axios";
 import Logo from "../../assets/logo.png";
 import "./session.css";
 import { UseUser } from "../../contexts/UserContext";
 
 import { alertIcon } from "../../utils/alerts";
-import Loading from "../../utils/loader/loading";
+import Loading from "./utils/loader/Loading";
 
 function LogIn() {
   const { isAuth, login, loading } = UseUser();

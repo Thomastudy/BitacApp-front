@@ -22,7 +22,7 @@ import { VoyageProvider } from "./contexts/VoyageContext";
 import { BoatProvider } from "./contexts/BoatContext";
 import AddNewBoat from "./pages/others/AddNewBoat";
 import EditVoyage from "./pages/others/EditVoyage";
-import Loading from "./utils/loader/loading";
+import Loading from "./utils/loader/Loading";
 
 function LayOut() {
   return (
