@@ -5,7 +5,9 @@ import "./session.css";
 import { UseUser } from "../../contexts/UserContext";
 
 import { alertIcon } from "../../utils/alerts";
-import Loading from "./utils/loader/Loading";
+import Loading from "../../utils/loader/caca";
+
+
 
 function LogIn() {
   const { isAuth, login, loading } = UseUser();
