@@ -1,1 +1,1 @@
-export const URL_link = "http://localhost:8080"
+export const URL_link = "https://bitacapp-production.up.railway.app/"
