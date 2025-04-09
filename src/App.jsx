@@ -24,9 +24,6 @@ import AddNewBoat from "./pages/others/AddNewBoat";
 import EditVoyage from "./pages/others/EditVoyage";
 import Loading from "./utils/loader/loading";
 
-
-
-
 function LayOut() {
   return (
     <>
