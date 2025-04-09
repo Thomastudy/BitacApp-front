@@ -1,4 +1,4 @@
-import "./caca.css";
+import "./loading.css";
 
 function Loading() {
   return (
